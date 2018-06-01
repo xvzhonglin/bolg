@@ -2,9 +2,9 @@
 class MainController extends BaseController {
 	// 首页
 	function actionIndex(){
-		// 连个hello world都木有？
-
-		// 回答：页面自动输出，请看main_index.html
+		$user = new User();
+		$this->findone = $user->find(array("uid"=>"2"));
+		$this->findall = $user->findAll();
 	}
 	
 	// 接收提交表单
